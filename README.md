@@ -51,7 +51,7 @@ Para ejecutar este flow, es necesario lo siguiente
 3. Hacer clic en el boton Deploy
 
 
-Instrucciones de operación}
+Instrucciones de operación
 
 Para observar el resutlado de este flow, abre un navegador y dirígete a localhost:1880/ui
 
