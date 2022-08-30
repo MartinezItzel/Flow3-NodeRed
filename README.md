@@ -63,7 +63,7 @@ A continuación puedes ver los nodos del flow.
 
 A continuación puede ver el tablero resultante.
 
-![Dashboard-Flow3](https://user-images.githubusercontent.com/111372195/187518055-2edf0056-1936-43e5-b4bb-8d454c2bba98.jpeg)
+![Dashboard-Flow3](https://user-images.githubusercontent.com/111372195/187518579-d6b3e673-8705-4f98-a121-559dea1e1d2e.jpeg)
 
 # Evidencias
 
