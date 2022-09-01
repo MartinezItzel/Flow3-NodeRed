@@ -1,0 +1,112 @@
+[
+    {
+        "id": "823ddcda4457e079",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "77a3349bc87eb1f9",
+        "type": "inject",
+        "z": "823ddcda4457e079",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 710,
+        "y": 140,
+        "wires": [
+            [
+                "cc9aaa48f0f68d16"
+            ]
+        ]
+    },
+    {
+        "id": "a24f6fc139e19896",
+        "type": "debug",
+        "z": "823ddcda4457e079",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "23eb1243b5d9105a",
+        "type": "ui_text",
+        "z": "823ddcda4457e079",
+        "group": "ce1694170f037420",
+        "order": 0,
+        "width": "6",
+        "height": "2",
+        "name": "",
+        "label": "Time Stamp Interpretado",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "cc9aaa48f0f68d16",
+        "type": "function",
+        "z": "823ddcda4457e079",
+        "name": "function 1",
+        "func": "//Lo que esta despues de \"//\" son comentarios\n//Crea un objeto DAte a partir del payload enviado por\nvar date = new Date(msg.payload);\n//Cambia el payload para quesea una fecha con formato\nmsg.payload = date.toString();\n//Registra el mensaje para que se envie al siguiente nodo\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 100,
+        "wires": [
+            [
+                "a24f6fc139e19896",
+                "23eb1243b5d9105a"
+            ]
+        ]
+    },
+    {
+        "id": "ce1694170f037420",
+        "type": "ui_group",
+        "name": "Fecha",
+        "tab": "b79e3a644b168074",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b79e3a644b168074",
+        "type": "ui_tab",
+        "name": "Flow 3",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
